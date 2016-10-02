@@ -1,5 +1,5 @@
 import {DOCUMENT_NODE} from './../common/nodeType'
-import {OPS as _} from './../common/constants';
+import {DOM_OPS as _} from './../common/constants';
 import Bridge from './bridge';
 
 import createDOMElement from './dom/DomElement';
@@ -8,6 +8,8 @@ import TextNode from './dom/TextNode';
 import Comment from './dom/Comment';
 
 import EventHandler from './eventHandler';
+import location from './location';
+import history from './history';
 
 let nodes = {};
 
@@ -51,7 +53,8 @@ const Window = {
         //EventHandler.add(this, eventType, callback, useCapture);
     },
     document: Document,
-    location: self.location
+    location,
+    history,
 }
 
 self.window = Window;

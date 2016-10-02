@@ -1,6 +1,7 @@
 import Channel from './../common/channel';
 import {WORKER_MESSAGES as _} from './../common/constants';
 import Dom from './Dom';
+import Location from './Location';
 
 class ReactWorker {
     constructor(worker, container) {
@@ -8,6 +9,7 @@ class ReactWorker {
         this.channel = new Channel(worker);
         this.channel.onMessage(this.handleMessage.bind(this));
         this.domOperation = Dom(container, this.channel);
+        this.locationOperation = Location(this.channel);
     }
 
     handleMessage(type, payload) {
@@ -20,8 +22,11 @@ class ReactWorker {
                     count: payload.length
                 });*/
                 break;
+            case _.location:
+                this.locationOperation(payload)
+                break;
             default:
-                console.log('Cannot handle message %s', data.type, data.args);
+                console.log('Cannot handle message %s', type, payload);
         }
     }
 }

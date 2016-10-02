@@ -1,6 +1,6 @@
 import TreeNode from './TreeNode';
 import Style from './Style';
-import {OPS as _} from './../../common/constants';
+import {DOM_OPS as _} from './../../common/constants';
 import {ELEMENT_NODE} from './../../common/nodeType'
 
 import EventHandler from './../eventHandler';

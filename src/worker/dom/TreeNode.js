@@ -1,5 +1,5 @@
 import guid from './../../common/guid';
-import {OPS as _} from './../../common/constants';
+import {DOM_OPS as _} from './../../common/constants';
 import Bridge from './../bridge';
 import nodeList from './../nodeList';
 import {DOCUMENT_FRAGMENT_NODE} from './../../common/nodeType';

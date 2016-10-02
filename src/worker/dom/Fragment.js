@@ -1,5 +1,5 @@
 import TreeNode from './TreeNode';
-import {OPS as _} from './../../common/constants';
+import {DOM_OPS as _} from './../../common/constants';
 import {DOCUMENT_FRAGMENT_NODE} from './../../common/nodeType'
 
 export default class Fragment extends TreeNode {

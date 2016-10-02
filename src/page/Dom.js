@@ -1,4 +1,4 @@
-import {OPS as _, WORKER_MESSAGES} from './../common/constants';
+import {DOM_OPS as _, WORKER_MESSAGES} from './../common/constants';
 import Channel from './../common/channel';
 import {DOCUMENT_NODE} from './../common/nodeType';
 
